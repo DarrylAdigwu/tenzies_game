@@ -1,23 +1,29 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background-color: #0B2434;
-  padding: 3rem 2rem;
-  max-width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #0B2434;
+  width: 100vw;
+  min-width: 240px;
+  height: 100vh;
 }
 
 main {
-  background-color: #F5F5F5;
-  width: inherit;
-  height: 100%;
   display: flex;
   justify-content: center;
+  background-color: #F5F5F5;
+  width: 90vw;
+  max-width: fit-content;
+  min-width: 240px;
+  height: 90%;
+  max-height: fit-content;
   border-radius: 10px;
 }
 
@@ -28,14 +34,15 @@ main {
   flex-wrap: wrap;
   margin: 6rem 4rem;
   padding: 3rem 2rem;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .game-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  min-width: 240px;
 }
 
 .game-info > h1 {
@@ -69,7 +76,7 @@ main {
 }
 
 .roll-dice {
-  width: auto;
+  width: 90%;
   height: auto;
   margin: .5rem auto;
   background-color: #5035FF;
@@ -97,4 +104,10 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media only screen and (max-width: 360px) {
+  .die-container {
+  grid-template-columns: repeat(2, 1fr);
+}
 }
