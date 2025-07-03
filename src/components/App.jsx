@@ -68,7 +68,8 @@ function App() {
         <div className="game-info">
           <h1>Tenzies</h1>
           <p>
-              Roll until all dice are the same. Click each die to freeze it at its current value between rolls.
+              Roll until all dice are the same. Click each die to freeze it at its current value between rolls.<br />
+              <br/>When all the die are matching, you win!
           </p>
         </div>
         <div className="die-container">
